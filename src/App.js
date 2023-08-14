@@ -18,30 +18,30 @@ function App() {
   });
   return (
     <ThemeProvider theme={themeCtx}>
-    <Paper elevation={4}>
-    <div className="App">
-      <AppBar className='Appbar' position="static">
-        <Toolbar className='nav-tools'>
+      <Paper elevation={4}>
+        <div className="App">
+          <AppBar className='Appbar' position="static">
+            <Toolbar className='nav-tools'>
 
-          <Button color="inherit" onClick={()=> navigate('/')}>TATA</Button>
-         
-          <Button
+              <Button color="inherit" onClick={() => navigate('/')}>TATA</Button>
+
+              <Button
                 sx={{
                   marginLeft: "auto",
                 }}
                 startIcon={mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
                 color="inherit" onClick={() => setMode(mode === "light" ? "dark" : "light")}>
-               
+
               </Button>
               <Button color="inherit" href='#contact'>Contact Us</Button>
-        </Toolbar>
-      </AppBar>
+            </Toolbar>
+          </AppBar>
 
-      <Routes>
-        <Route path='/' element={<Home />} />
-      </Routes>
-    </div>
-    </Paper>
+          <Routes>
+            <Route path='/' element={<Home />} />
+          </Routes>
+        </div>
+      </Paper>
     </ThemeProvider>
   );
 }
